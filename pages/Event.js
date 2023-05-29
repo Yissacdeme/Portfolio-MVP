@@ -1,5 +1,9 @@
 import React from 'react';
 import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
+import axios from 'axios'; // or any other library for making HTTP requests
+
+const [events, setEvents] = useState([]);
 
 const [eventName, setEventName] = useState('');
 const [eventDate, setEventDate] = useState('');
@@ -9,6 +13,16 @@ const handleSubmit = (e) => {
   setEventName(e.target.elements.eventName.value);
   setEventDate(e.target.elements.eventDate.value);
 };
+
+useEffect(() => {
+  axios.get('https://api.example.com/events')
+    .then(response => {
+      setEvents(response.data);
+    })
+    .catch(error => {
+      console.error('Error fetching events:', error);
+    });
+}, []);
 
 function Event() {
   return (
@@ -38,5 +52,14 @@ function Event() {
   );
 }
 
+  <div>
+    <h2>Events</h2>
+    <ul>
+      {events.map(event => (
+        <li key={event.id}>{event.name}</li>
+      ))}
+    </ul>
+  </div>
+);
 export default Event;
 
