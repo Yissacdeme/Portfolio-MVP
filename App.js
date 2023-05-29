@@ -1,5 +1,23 @@
 
 import React from 'react';
+import './styles.css';
+
+function Header() {
+  return <header className="header">This is the header</header>;
+}
+
+function Button() {
+  return <button className="button">Click me</button>;
+}
+
+function Form() {
+  return (
+    <form>
+      <input type="text" className="input" placeholder="Enter your name" />
+    </form>
+  );
+}
+
 import Home from './Home';
 import Event from './Event';
 import './App.css';
