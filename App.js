@@ -1,5 +1,7 @@
 
 import React from 'react';
+import Home from './Home';
+import Event from './Event';
 import './App.css';
 
 function App() {
