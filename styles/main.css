@@ -49,3 +49,14 @@
     .feature-section .feature p {
       margin-top: 10px;
     }
+/* Styles for the About section */
+    .about-section {
+      text-align: center;
+      margin: 50px 0;
+    }
+    .about-section p {
+      margin-bottom: 20px;
+    }
+    .about-section .profile-links a {
+      margin-right: 10px;
+    }
