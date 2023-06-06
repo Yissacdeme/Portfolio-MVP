@@ -21,4 +21,31 @@
   border: 1px solid #ccc;
   border-radius: 4px;
 }
-
+/*Cover Image Style */
+.cover-image {
+      width: 100%;
+      height: auto;
+}
+/* Styles for the feature section */
+    .feature-section {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin: 50px 0;
+    }
+    .feature-section .feature {
+      flex: 0 0 30%;
+      text-align: center;
+    }
+    .feature-section .feature img {
+      width: 200px;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 50%;
+    }
+    .feature-section .feature h2 {
+      margin-top: 20px;
+    }
+    .feature-section .feature p {
+      margin-top: 10px;
+    }
